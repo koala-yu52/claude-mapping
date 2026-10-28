@@ -1,0 +1,9 @@
+{
+  "port": 8082,
+  "upstream": "<用url替换引号里面的内容>",
+  "apiKey": "<用你的API-key替换引号里面的内容>",
+  "modelMap": {
+    "claude-sonnet-5": { "model": "<填入需要映射的模型>"},
+    "claude-opus-5":{ "model": "<填入需要映射的模型>"}
+  }
+}
