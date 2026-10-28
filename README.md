@@ -10,6 +10,10 @@
 
 > 下载 zip 后解压，阅读教程再启动；所有上游 API Key 需要自行在各大模型开放平台申请。
 
+## 项目定位
+
+全网已有不少通用的 OpenAI → Anthropic 协议转换代理项目，但缺少面向国内用户、配套完整中文实操文档、并整合多家国产大模型的一站式教程。本仓库附带自研的本地代理脚本，专注解决 Claude Desktop / Claude Code 通过本地代理接入国产 OpenAI 格式大模型的落地问题，仅供个人本地学习研究。
+
 ## 文件说明
 
 | 文件 | 作用 |
@@ -64,6 +68,10 @@ A pure-local Node proxy that maps Claude model names in Claude Desktop / Claude 
 - 📦 One-click download of the proxy scripts: [claude-mapping.zip](claude-mapping.zip)
 
 > Download and extract the zip, read the tutorial before starting; all upstream API keys must be obtained from the model providers' open platforms yourself.
+
+## Why this project exists
+
+Plenty of generic OpenAI → Anthropic protocol-conversion proxy projects already exist, but there is no one-stop tutorial aimed at Chinese users, complete with full hands-on Chinese documentation and covering multiple Chinese LLM providers. This repo ships a self-developed local proxy script focused on one concrete problem: getting Claude Desktop / Claude Code connected to OpenAI-compatible Chinese LLMs through a local proxy. For personal local learning and research only.
 
 ## Files
 
