@@ -4,8 +4,8 @@
 
 > ⚠️ **仅限本机 `127.0.0.1` 本地学习测试，禁止公网部署、禁止对外提供中转服务。**
 
-- 📖 在线阅读教程：[本地代理使用教程](docs/tutorial.md)
-- 📄 离线 PDF 手册：[本地代理使用手册.pdf](docs/本地代理使用手册.pdf)
+- 📖 在线阅读教程（中文）：[docs/中文/使用教程.md](docs/中文/使用教程.md) ｜ English tutorial: [docs/English/tutorial-en.md](docs/English/tutorial-en.md)
+- 📄 离线 PDF 手册：[中文版](docs/中文/本地代理使用手册.pdf) ｜ [English](docs/English/Tutorial-User-Manual.pdf)
 - 📦 一键下载代理脚本压缩包：[claude-mapping.zip](claude-mapping.zip)
 
 > 下载 zip 后解压，阅读教程再启动；所有上游 API Key 需要自行在各大模型开放平台申请。
@@ -29,7 +29,7 @@ node proxy.js
 #    填入终端显示的 http://127.0.0.1:8082
 ```
 
-详细图文步骤见 [docs/tutorial.md](docs/tutorial.md)。
+详细图文步骤见 [docs/中文/使用教程.md](docs/中文/使用教程.md)（English: [docs/English/tutorial-en.md](docs/English/tutorial-en.md)）。
 
 ## mapping.json 示例
 
