@@ -50,3 +50,59 @@ node proxy.js
 ## 许可
 
 仅供个人学习和参考使用，禁止修改监听地址为公网、禁止搭建公共中转服务。
+
+---
+
+# English
+
+A pure-local Node proxy that maps Claude model names in Claude Desktop / Claude Code requests to Chinese LLMs (e.g. GLM). No third-party software — all tokens go through the API key you apply for yourself.
+
+> ⚠️ **For local learning and testing on `127.0.0.1` only. Public-network deployment and public relay services are strictly prohibited.**
+
+- 📖 Tutorial (English): [docs/English/tutorial-en.md](docs/English/tutorial-en.md) ｜ 中文教程: [docs/中文/使用教程.md](docs/中文/使用教程.md)
+- 📄 Offline PDF manual: [English](docs/English/Tutorial-User-Manual.pdf) ｜ [中文版](docs/中文/本地代理使用手册.pdf)
+- 📦 One-click download of the proxy scripts: [claude-mapping.zip](claude-mapping.zip)
+
+> Download and extract the zip, read the tutorial before starting; all upstream API keys must be obtained from the model providers' open platforms yourself.
+
+## Files
+
+| File | Purpose |
+|---|---|
+| `proxy.js` | Main mapping-proxy script (Node.js, zero dependencies) |
+| `mapping.json` | Config: port, upstream URL, API key, model mapping & thinking strength |
+| `start-proxy.bat` | Windows double-click launcher |
+| `claude-mapping.zip` | Packaged download of the scripts above |
+
+## Quick start
+
+```bash
+# 1. Edit mapping.json: fill in upstream, apiKey and modelMap
+# 2. Start it (or just double-click start-proxy.bat)
+node proxy.js
+# 3. In Claude Desktop: Developer - Configure third-party inference,
+#    enter the http://127.0.0.1:8082 shown in the terminal
+```
+
+Full illustrated steps: [docs/English/tutorial-en.md](docs/English/tutorial-en.md) (中文: [docs/中文/使用教程.md](docs/中文/使用教程.md)).
+
+## mapping.json example
+
+```json
+{
+  "port": 8082,
+  "upstream": "<upstream API URL>",
+  "apiKey": "<your API key>",
+  "modelMap": {
+    "claude-sonnet-5": { "model": "<target model>", "thinking": "high" },
+    "claude-opus-5": { "model": "<target model>" }
+  }
+}
+```
+
+Thinking levels (`thinking`): `off` / `low` / `medium` / `high` / `max`, or a plain number for a custom `budget_tokens`.
+
+## License
+
+For personal learning and reference only. Modifying the listening address to a public network or setting up a public relay service is prohibited.
+
